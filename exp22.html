@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Password Matching Example</title>
+</head>
+
+<body>
+    <h1>Register</h1>
+    <form id="registrationForm">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        <br>
+        <p id="message"></p>
+        <button type="button" id="checkPassword">Check Password</button>
+    </form>
+
+    <script>
+        document.getElementById("checkPassword").addEventListener("click", function() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var message = document.getElementById("message");
+
+            if (password === confirmPassword) {
+                message.textContent = "Passwords match!";
+                message.style.color = "green";
+            } else {
+                message.textContent = "Passwords do not match!";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+
+</html>

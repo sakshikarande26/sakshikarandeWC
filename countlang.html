@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Languages</title>
+</head>
+
+<body>
+    <h1>
+        List of Languages
+    </h1>
+    <button id="countButton">Count Language</button>
+    <p id="languageCount"></p>
+
+    <script>
+        const languages = ['Python', 'Java', 'HTML', 'CSS', 'javascript', 'Ruby'];
+
+        function countLanguages() {
+            const languageCount = languages.length;
+            const languageList = languages.join(', ');
+            document.getElementById("languageCount").textContent = 'No of languages: ${languageCount}/nLanguages: ${languageList}';
+        }
+
+        document.getElementById("countButton").addEventListener("click", countLanguages);
+    </script>
+</body>
+
+</html>

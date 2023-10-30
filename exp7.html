@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+
+    <style>
+        * {
+            color: blue;
+        }
+        
+        p {
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background-color: yellow;
+        }
+        
+        #special {
+            border: 2px solid red;
+        }
+        
+        a[href^="https"] {
+            text-decoration: underline;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>This is a paragraph with universal selector style.</p>
+    <p>This is another paragraph with universal & type selector style.</p>
+    <p class="highlight">This is a highlighted paragraph with class selector style.</p>
+    <p id="special">This is a special paragraph with ID selector style.</p>
+    <a href="https://www.example.com">Visit Example</a>
+</body>
+
+</html>

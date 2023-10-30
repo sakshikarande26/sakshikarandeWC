@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+
+<body>
+    <h1>Login Form</h1>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+        <br><br>
+        <input type="submit" value="login">
+    </form>
+    <p id="loginMessage"></p>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "student" && password == "123") {
+                document.getElementById("loginMessage").innerHTML = "Login Successful!";
+                alert("Success!");
+                return true;
+            } else {
+                document.getElementById("loginMessage").innerHTML = "Invalid credentials, try again!";
+                alert("Try again!");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
